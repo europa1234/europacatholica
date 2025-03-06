@@ -68,6 +68,7 @@ td.image-box {
     font-weight: 400 !important;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    padding: 15px; /* Increased padding for text boxes */
 }
 
 .box.image {
