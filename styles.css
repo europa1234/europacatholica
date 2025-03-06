@@ -23,7 +23,7 @@ body {
     width: 100%;
     overflow-x: auto;
     overflow-y: hidden;
-    padding: 20px 0;
+    padding: 10px 0;
     -webkit-overflow-scrolling: touch;
     scroll-behavior: auto;
 }
