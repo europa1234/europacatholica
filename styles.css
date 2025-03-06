@@ -68,7 +68,7 @@ td.image-box {
     font-weight: 400 !important;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    padding: 35px; /* Increased padding for text boxes */
+    padding: 30px; /* Increased padding for text boxes */
 }
 
 .box.image {
@@ -84,7 +84,7 @@ td.image-box {
 }
 
 .progress-bar-container {
-    width: 100%;
+    width: 95%;
     height: 12px;
     background-color: #630d18;
     margin: 10px 0 20px 0;
