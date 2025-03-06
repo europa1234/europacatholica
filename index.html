@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Societas Europa Catholica</title>
+    <!-- Import Sort Mill Goudy from Google Fonts with explicit weights -->
+    <link href="https://fonts.googleapis.com/css2?family=Sort+Mill+Goudy:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #630d18;
+            margin: 0;
+            font-family: 'Sort Mill Goudy', serif;
+        }
+
+        .site-container {
+            margin-left: 7%; /* 7% left margin for the entire site */
+            width: 93%; /* Ensure content fits within remaining space */
+        }
+
+        .logo {
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        .logo img {
+            max-width: 200px;
+            height: auto;
+        }
+
+        .table-container {
+            width: 100%;
+            overflow-x: auto;
+            overflow-y: hidden;
+            padding: 20px 0;
+            -webkit-overflow-scrolling: touch; /* Smooth scrolling for iOS devices */
+            scroll-behavior: auto; /* Default browser scroll behavior */
+        }
+
+        table {
+            border-collapse: separate;
+            border-spacing: 15px 0; /* Base spacing between boxes */
+            width: max-content;
+            margin: 0 auto;
+        }
+
+        td {
+            width: 300px; /* Match .box.text width */
+            height: 300px; /* Match .box.text height */
+            padding: 0;
+        }
+
+        /* Add extra space after image boxes */
+        td.image-box {
+            padding-right: 5px; /* Extra space after image boxes to balance spacing */
+        }
+
+        .box {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #f2d094;
+            font-size: 14px;
+            line-height: 1.5;
+            text-align: justify;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        .box.text {
+            width: 300px; /* Updated width */
+            height: 300px; /* Updated height */
+            overflow: hidden;
+            border: 5px solid #f2d094; /* Thick border for text boxes */
+            box-sizing: border-box; /* Include border in dimensions */
+            font-family: 'Sort Mill Goudy', serif !important; /* Forcefully apply Sort Mill Goudy */
+            font-size: 16px !important; /* Increased by 2 points from 14px, enforced */
+            font-weight: 400 !important; /* Ensure regular weight */
+            -webkit-font-smoothing: antialiased; /* Improve rendering */
+            -moz-osx-font-smoothing: grayscale; /* Improve rendering on macOS */
+        }
+
+        .box.image {
+            width: 321px; /* Updated width as requested */
+            height: 321px; /* Updated height as requested */
+            box-sizing: border-box;
+        }
+
+        .box.image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .progress-bar-container {
+            width: 100%; /* Respect the 7% margin from site-container */
+            height: 12px; /* Increased height to accommodate outline and spacing */
+            background-color: #630d18; /* Matches background */
+            margin: 10px 0 20px 0; /* Added extra space below progress bar */
+            border: 1px solid #f2d094; /* Outline */
+            border-radius: 5px; /* Rounded edges for the container */
+            box-sizing: border-box;
+            padding: 1px; /* 1px spacing between outline and progress bar */
+        }
+
+        .progress-bar {
+            height: 100%; /* Fits within container after padding */
+            background-color: #f2d094;
+            width: 0%; /* Will be updated via JavaScript */
+            border-radius: 5px; /* Rounded edges */
+            transition: width 0.1s linear; /* Smooth transition for progress updates */
+        }
+
+        .separator {
+            width: 90%;
+            height: 2px;
+            background-color: #f2d094;
+            margin: 30px auto 20px auto; /* Increased space above (30px) and kept 20px below */
+        }
+
+        /* Hide scrollbar but keep functionality */
+        .table-container::-webkit-scrollbar {
+            display: none;
+        }
+
+        .table-container {
+            -ms-overflow-style: none; /* IE and Edge */
+            scrollbar-width: none; /* Firefox */
+        }
+    </style>
+</head>
+<body>
+    <div class="site-container">
+        <!-- Logo Section -->
+        <div class="logo">
+            <img src="image01.jpg">
+        </div>
+
+        <!-- First Table -->
+        <div class="table-container" id="table1">
+            <table>
+                <tr>
+                    <td><div class="box text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit.</div></td>
+                    <td class="image-box"><div class="box image"><img src="box001.jpg"></div></td>
+                    <td><div class="box text">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div></td>
+                    <td class="image-box"><div class="box image"><img src="box001.jpg"></div></td>
+                    <td><div class="box text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae.</div></td>
+                    <td class="image-box"><div class="box image"><img src="box001.jpg"></div></td>
+                    <td><div class="box text">Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem.</div></td>
+                </tr>
+            </table>
+        </div>
+        <div class="progress-bar-container">
+            <div class="progress-bar" id="progress1"></div>
+        </div>
+        <!-- Separator -->
+        <div class="separator"></div>
+
+        <!-- Second Table -->
+        <div class="table-container" id="table2">
+            <table>
+                <tr>
+                    <td class="image-box"><div class="box image"><img src="box001.jpg"></div></td>
+                    <td><div class="box text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</div></td>
+                    <td class="image-box"><div class="box image"><img src="box001.jpg"></div></td>
+                    <td><div class="box text">Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum.</div></td>
+                    <td class="image-box"><div class="box image"><img src="box001.jpg"></div></td>
+                    <td><div class="box text">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate.</div></td>
+                    <td class="image-box"><div class="box image"><img src="box001.jpg"></div></td>
+                </tr>
+            </table>
+        </div>
+        <div class="progress-bar-container">
+            <div class="progress-bar" id="progress2"></div>
+        </div>
+        <!-- Separator -->
+        <div class="separator"></div>
+
+        <!-- Third Table -->
+        <div class="table-container" id="table3">
+            <table>
+                <tr>
+                    <td><div class="box text">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.</div></td>
+                    <td class="image-box"><div class="box image"><img src="box001.jpg"></div></td>
+                    <td><div class="box text">Similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi.</div></td>
+                    <td class="image-box"><div class="box image"><img src="box001.jpg"></div></td>
+                    <td><div class="box text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</div></td>
+                    <td class="image-box"><div class="box image"><img src="box001.jpg"></div></td>
+                    <td><div class="box text">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa who officia deserunt.</div></td>
+                </tr>
+            </table>
+        </div>
+        <div class="progress-bar-container">
+            <div class="progress-bar" id="progress3"></div>
+        </div>
+    </div>
+
+    <script>
+        // Smooth scrolling for desktop, native scrolling for mobile
+        (function() {
+            // Utility to check if element is scrollable
+            function isScrollable(element) {
+                return element.scrollWidth > element.clientWidth;
+            }
+
+            // Detect if device is mobile
+            function isMobileDevice() {
+                return /Mobi|Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ||
+                       ('ontouchstart' in window || navigator.maxTouchPoints > 0);
+            }
+
+            // Smooth scroll function for desktop
+            function smoothScroll(element, target, duration) {
+                const start = element.scrollLeft;
+                const change = target - start;
+                const startTime = performance.now();
+                
+                // Clamp the target to prevent overscrolling
+                const maxScroll = element.scrollWidth - element.clientWidth;
+                const clampedTarget = Math.max(0, Math.min(target, maxScroll));
+                
+                function animate(currentTime) {
+                    const elapsed = currentTime - startTime;
+                    const progress = Math.min(elapsed / duration, 1);
+                    const ease = progress * progress * (3 - 2 * progress); // Ease-in-out cubic
+                    element.scrollLeft = start + change * ease;
+
+                    if (progress < 1) {
+                        requestAnimationFrame(animate);
+                    }
+                }
+
+                requestAnimationFrame(animate);
+            }
+
+            // Add event listeners to each table-container
+            document.querySelectorAll('.table-container').forEach((container, index) => {
+                if (isScrollable(container)) {
+                    const progressBar = document.getElementById(`progress${index + 1}`);
+
+                    // Update progress bar based on scroll position
+                    function updateProgress() {
+                        const maxScroll = container.scrollWidth - container.clientWidth;
+                        const currentScroll = container.scrollLeft;
+                        const progressPercent = maxScroll > 0 ? (currentScroll / maxScroll) * 100 : 0;
+                        progressBar.style.width = `${progressPercent}%`;
+                    }
+
+                    // Update progress bar during scroll
+                    container.addEventListener('scroll', updateProgress);
+
+                    // Initial update in case there's no scroll
+                    updateProgress();
+
+                    // Smooth scrolling only for desktop
+                    if (!isMobileDevice()) {
+                        let lastScrollDirection = 0; // Track scroll direction to prevent jumps
+
+                        container.addEventListener('wheel', (event) => {
+                            event.preventDefault();
+
+                            // Determine scroll direction and amount
+                            const delta = event.deltaY;
+                            const direction = delta > 0 ? 1 : -1;
+
+                            // Avoid rapid direction changes causing jumps
+                            if (lastScrollDirection !== direction) {
+                                lastScrollDirection = direction;
+                            }
+
+                            // Calculate scroll amount with momentum, slightly faster
+                            const baseScrollAmount = Math.abs(delta) * 1.5; // Increased for slightly faster scrolling
+                            const momentumFactor = 1.5; // Good momentum effect
+                            const scrollAmount = baseScrollAmount * momentumFactor * direction;
+                            const targetScroll = container.scrollLeft + scrollAmount;
+
+                            // Smooth scroll with slightly shorter duration for faster response
+                            const duration = 250; // Reduced from 300ms to 250ms for faster swish
+
+                            smoothScroll(container, targetScroll, duration);
+                        }, { passive: false });
+
+                        // Update progress bar during smooth scroll animation
+                        container.addEventListener('scroll', updateProgress);
+                    }
+                }
+            });
+        })();
+    </script>
+</body>
+</html>
